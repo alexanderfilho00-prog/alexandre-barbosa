@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050A22">
+<meta property="og:title" content="Alexandre Ribeiro Barbosa">
+<meta property="og:description" content="Executivo de Finanças · Tesouraria Global · Governança">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230A1440'/%3E%3Ctext x='32' y='38' font-family='Helvetica,Arial,sans-serif' font-size='18' font-weight='600' fill='white' text-anchor='middle'%3EARB%3C/text%3E%3C/svg%3E">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Alexandre Ribeiro Barbosa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Executivo de Finanças · Tesouraria Global · Governança">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: navy hero with a lit horizon -> light bento -> navy editorial -> light boards + timeline -> light formation -> navy close.
+   One committed look (dark and light bands alternate by design), so colors are set explicitly and do not follow the viewer theme. */
+:root{
+  --navy-950:#050A22;
+  --navy-900:#0A1440;
+  --navy-800:#11206A;
+  --blue-600:#2451F0;
+  --blue-500:#3E6CFF;
+  --blue-300:#9DB8FF;
+  --ice:#DCE6FF;
+  --paper:#F2F4FA;
+  --paper-2:#E8ECF6;
+  --surface:#FFFFFF;
+  --ink:#0B1233;
+  --ink-2:#2E3760;
+  --muted:#5B6488;
+  --line:rgba(11,18,51,.11);
+  --live:#0E9F74;
+  --on-dark:#F4F7FF;
+  --on-dark-2:rgba(228,236,255,.74);
+
+  --f-display:"Geist", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --f-body:"Geist", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --r-xl:32px; --r-lg:24px; --r-md:18px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --gutter-l:max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(20px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-950)}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.025em}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{max-width:1200px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+:focus-visible{outline:2px solid var(--blue-500);outline-offset:3px;border-radius:12px}
+.band--dark :focus-visible,.hero :focus-visible{outline-color:#fff}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:#fff;color:var(--ink);padding:10px 14px;border-radius:12px;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+
+/* ───────── Liquid glass material ─────────
+   .glass        : carries outer shadow and layout
+   .glass::after : the lens — backdrop blur + saturation (+ edge refraction in Chromium), tint, inner light
+   .glass::before: specular rim, brightest on the top edge */
+.glass{
+  --g-tint:255 255 255; --g-a:.10; --g-blur:18px; --g-sat:185%; --g-rim:.72; --g-shadow:3 8 40;
+  position:relative;isolation:isolate;
+  box-shadow:0 18px 42px -20px rgb(var(--g-shadow) / .55),0 2px 10px -3px rgb(var(--g-shadow) / .22);
+}
+.glass::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;
+  -webkit-backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat)) brightness(1.06);
+  backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat)) brightness(1.06);
+  background:
+    radial-gradient(140% 90% at var(--mx,28%) var(--my,-10%), rgb(255 255 255 / .26), rgb(255 255 255 / 0) 52%),
+    linear-gradient(180deg, rgb(var(--g-tint) / calc(var(--g-a) + .07)) 0%, rgb(var(--g-tint) / var(--g-a)) 55%, rgb(var(--g-tint) / calc(var(--g-a) + .03)) 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgb(255 255 255 / .55),
+    inset 0 -1px 0 0 rgb(255 255 255 / .12),
+    inset 0 0 0 1px rgb(255 255 255 / .10),
+    inset 0 -14px 26px -18px rgb(255 255 255 / .35),
+    inset 0 12px 22px -18px rgb(255 255 255 / .30);
+}
+.refract .glass::after{
+  -webkit-backdrop-filter:blur(var(--g-blur)) saturate(var(--g-sat)) brightness(1.06);
+  backdrop-filter:url(#lg-edge) blur(var(--g-blur)) saturate(var(--g-sat)) brightness(1.06);
+}
+.glass::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;z-index:2;pointer-events:none;
+  background:linear-gradient(165deg, rgb(255 255 255 / var(--g-rim)) 0%, rgb(255 255 255 / .14) 26%, rgb(255 255 255 / 0) 50%, rgb(255 255 255 / .08) 74%, rgb(255 255 255 / .38) 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+}
+/* glass on light backgrounds: cooler tint, darker shadow, rim kept visible */
+.glass--onlight{--g-tint:236 241 255;--g-a:.42;--g-rim:.95;--g-shadow:20 34 90}
+.glass--onlight::after{box-shadow:inset 0 1px 0 0 rgb(255 255 255 / .95),inset 0 -1px 0 0 rgb(30 50 120 / .10),inset 0 0 0 1px rgb(40 60 140 / .10),inset 0 -14px 26px -18px rgb(255 255 255 / .8)}
+/* reading surfaces: more opaque */
+.glass--read{--g-a:.80;--g-tint:246 248 255;--g-blur:34px;--g-sat:150%}
+@media (prefers-reduced-transparency:reduce){
+  .glass{--g-a:.86}
+  .glass:not(.glass--onlight):not(.glass--read){--g-tint:18 30 90}
+}
+
+/* glass controls */
+.cap{
+  display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border:0;border-radius:999px;cursor:pointer;
+  font-weight:550;font-size:.97rem;letter-spacing:-.005em;text-decoration:none;background:none;
+  transition:transform .35s var(--ease),filter .35s var(--ease);
+}
+.cap::after{transition:background .35s var(--ease)}
+.cap:hover{transform:translateY(-1px) scale(1.02)}
+.cap:active{transform:scale(.97);transition-duration:.12s}
+.cap:active::after{--g-a:.24}
+.cap--solid{color:var(--navy-950);--g-tint:255 255 255;--g-a:.86;--g-rim:1}
+.cap--solid:active::after{--g-a:.72}
+.cap--ghost{color:#fff}
+.cap svg{width:18px;height:18px;flex:none}
+.circ{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:none;flex:none;transition:transform .35s var(--ease)}
+.circ:hover{transform:scale(1.06)}
+.circ:active{transform:scale(.93)}
+.circ svg{width:18px;height:18px}
+
+/* ───────── Floating nav ───────── */
+.nav{
+  position:fixed;z-index:50;left:50%;top:calc(env(safe-area-inset-top,0px) + 14px);transform:translateX(-50%);
+  display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;color:#fff;
+  width:max-content;max-width:calc(100vw - 24px);
+  --g-blur:22px;--g-a:.12;
+  transition:color .4s var(--ease);
+}
+.nav::after{transition:background .4s var(--ease)}
+.nav[data-tone="light"]{color:var(--ink);--g-tint:244 247 255;--g-a:.46;--g-shadow:20 34 90}
+.brand{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;text-decoration:none;font-family:var(--f-mono);font-size:.72rem;font-weight:500;letter-spacing:.06em;
+  background:linear-gradient(160deg, rgb(255 255 255 / .28), rgb(255 255 255 / .06));box-shadow:inset 0 0 0 1px rgb(255 255 255 / .28)}
+.nav[data-tone="light"] .brand{background:var(--navy-900);color:#fff;box-shadow:none}
+.nav-links{position:relative;display:flex;gap:2px;list-style:none;margin:0;padding:0}
+.nav-links a{position:relative;z-index:1;display:block;padding:9px 14px;border-radius:999px;font-size:.88rem;font-weight:500;text-decoration:none;opacity:.78;transition:opacity .3s}
+.nav-links a:hover,.nav-links a[aria-current="true"]{opacity:1}
+.nav-ind{position:absolute;z-index:0;top:0;bottom:0;left:0;width:0;border-radius:999px;opacity:0;
+  background:linear-gradient(180deg, rgb(255 255 255 / .30), rgb(255 255 255 / .12));
+  box-shadow:inset 0 1px 0 rgb(255 255 255 / .5),inset 0 0 0 1px rgb(255 255 255 / .16);
+  transition:transform .55s var(--ease),width .55s var(--ease),opacity .3s}
+.nav[data-tone="light"] .nav-ind{background:linear-gradient(180deg, rgb(255 255 255 / .95), rgb(255 255 255 / .7));box-shadow:0 1px 4px rgb(20 34 90 / .14),inset 0 0 0 1px rgb(20 34 90 / .06)}
+.nav-cur{display:none;padding:0 6px 0 4px;font-size:.88rem;font-weight:550;white-space:nowrap}
+.nav-menu{display:none;color:inherit}
+.nav-menu span{display:block;width:16px;height:1.5px;background:currentColor;border-radius:2px;transition:transform .35s var(--ease)}
+.nav-menu span+span{margin-top:5px}
+.nav-menu[aria-expanded="true"] span:first-child{transform:translateY(3.25px) rotate(45deg)}
+.nav-menu[aria-expanded="true"] span:last-child{transform:translateY(-3.25px) rotate(-45deg)}
+.sheet{
+  position:fixed;z-index:49;left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 74px);
+  padding:10px;border-radius:28px;--g-tint:246 248 255;--g-a:.88;--g-blur:36px;--g-shadow:6 12 50;color:var(--ink);
+  transform-origin:50% 0;animation:sheet-drop .45s var(--ease)
+}
+.sheet ul{list-style:none;margin:0;padding:0;display:grid}
+.sheet a{display:flex;justify-content:space-between;align-items:center;padding:15px 16px;border-radius:18px;text-decoration:none;font-size:1.05rem;font-weight:550}
+.sheet a[aria-current="true"]{background:rgb(255 255 255 / .7)}
+.sheet a .mono{color:var(--muted)}
+@keyframes sheet-in{from{opacity:0;transform:translateY(-8px) scale(.97)}}
+@keyframes sheet-drop{from{transform:translateY(-10px) scale(.97)}}
+
+/* floating contact capsule */
+.fab{
+  position:fixed;z-index:48;right:calc(max(16px, env(safe-area-inset-right,0px)) + 4px);bottom:calc(env(safe-area-inset-bottom,0px) + 18px);
+  min-height:46px;padding:0 18px 0 14px;color:#fff;--g-tint:30 60 190;--g-a:.42;--g-blur:16px;
+  transition:transform .5s var(--ease),opacity .4s var(--ease)
+}
+.fab .dot{width:8px;height:8px;border-radius:50%;background:#7CF0C3;box-shadow:0 0 0 4px rgb(124 240 195 / .22)}
+.fab[data-hidden="true"]{opacity:0;transform:translateY(16px) scale(.95);pointer-events:none}
+
+/* ───────── Hero ───────── */
+.hero{
+  position:relative;overflow:hidden;color:var(--on-dark);
+  background:
+    radial-gradient(90% 62% at 62% 118%, #6E95FF 0%, #3561FF 20%, #1C3AD0 38%, rgb(17 32 106 / 0) 68%),
+    radial-gradient(60% 40% at 8% 100%, rgb(45 90 255 / .45), rgb(45 90 255 / 0) 70%),
+    linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 52%, #0F1D66 100%);
+  min-height:clamp(680px, 96svh, 980px);display:flex;align-items:stretch;
+}
+.hero-light{position:absolute;inset:0;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(2px)}
+.orb--a{width:min(46vw,600px);aspect-ratio:1;right:-6%;top:6%;background:radial-gradient(circle at 38% 36%, rgb(160 190 255 / .55), rgb(70 110 255 / .25) 38%, rgb(30 60 220 / 0) 68%);animation:drift-a 22s ease-in-out infinite alternate}
+.orb--b{width:min(26vw,320px);aspect-ratio:1;right:24%;top:44%;background:radial-gradient(circle at 50% 50%, rgb(255 255 255 / .9), rgb(170 200 255 / .55) 22%, rgb(80 120 255 / .0) 62%);filter:blur(6px);animation:drift-b 18s ease-in-out infinite alternate}
+.orb--c{width:min(70vw,900px);height:220px;left:10%;bottom:-120px;border-radius:50%;background:radial-gradient(closest-side, rgb(170 200 255 / .65), rgb(90 130 255 / 0));filter:blur(18px)}
+@keyframes drift-a{to{transform:translate(-4%,6%) scale(1.06)}}
+@keyframes drift-b{to{transform:translate(8%,-10%) scale(.92)}}
+.curves{position:absolute;inset:auto 0 0 0;width:100%;height:78%;opacity:.9}
+.curves path{fill:none;stroke-width:1.1;vector-effect:non-scaling-stroke}
+.hero .wrap{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:40px;align-items:center;padding-block:clamp(120px,16vh,170px) clamp(64px,9vh,110px)}
+.hero-copy{min-width:0;display:grid;gap:26px;max-width:640px}
+.hero-id{display:grid;gap:10px}
+.hero-name{font-size:clamp(1.05rem,1.6vw,1.2rem);font-weight:600;letter-spacing:-.01em;color:#fff}
+.hero-role{color:var(--blue-300)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.4rem);line-height:.98;font-weight:600;letter-spacing:-.045em;color:#fff}
+.hero h1 em{font-style:normal;color:transparent;background:linear-gradient(180deg,#fff 10%,#B9CCFF 95%);-webkit-background-clip:text;background-clip:text}
+.hero-lead{font-size:clamp(1rem,1.25vw,1.12rem);color:var(--on-dark-2);max-width:56ch;line-height:1.6}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+
+.bubbles{position:relative;min-width:0;height:min(520px,60vh);min-height:420px}
+.bub{
+  position:absolute;border-radius:28px;padding:20px 22px;color:#fff;display:grid;gap:4px;
+  --g-a:.07;--g-blur:var(--b-blur,16px);
+  transform:translate3d(calc(var(--px,0) * var(--d) * 1px), calc((var(--py,0) * var(--d) * 1px) + (var(--sy,0) * var(--d) * -0.06px)), 0);
+  transition:transform .9s var(--ease);
+  animation:bob var(--bob,9s) ease-in-out infinite alternate;
+}
+.bub-k{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:600;letter-spacing:-.045em;line-height:1}
+.bub-v{font-size:.95rem;color:rgb(235 241 255 / .86);line-height:1.35}
+.bub-t{font-size:1.18rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.bub .mono{color:rgb(220 230 255 / .7);margin-bottom:6px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.bub--1{--d:26;left:4%;top:8%;width:min(270px,62%);--b-blur:18px;--bob:10s}
+.bub--2{--d:14;right:0;top:40%;width:min(250px,58%);--b-blur:12px;--bob:8s;animation-delay:-3s}
+.bub--3{--d:8;left:14%;bottom:4%;width:min(290px,66%);--b-blur:10px;--bob:11s;animation-delay:-6s}
+.bub--3 .bub-k{font-size:1.25rem;letter-spacing:-.02em;line-height:1.18}
+@keyframes bob{from{translate:0 -6px}to{translate:0 6px}}
+.hero-note{position:absolute;right:0;bottom:-34px;left:14%;font-size:.78rem;color:rgb(220 230 255 / .66);line-height:1.4}
+
+/* ───────── Bands ───────── */
+.band{padding-block:clamp(84px,11vw,140px)}
+.band--dark{background:var(--navy-950);color:var(--on-dark)}
+.band--paper2{background:var(--paper-2)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:28px 60px;align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.head h2{font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.02;font-weight:600}
+.head p{color:var(--muted);max-width:52ch;font-size:1.04rem}
+.band--dark .head p{color:var(--on-dark-2)}
+.head .eyebrow{display:block;margin-bottom:16px;color:var(--blue-600)}
+.band--dark .head .eyebrow{color:var(--blue-300)}
+
+/* ───────── Especialidades (bento) ───────── */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.tile{
+  position:relative;overflow:hidden;text-align:left;cursor:pointer;border:0;border-radius:var(--r-xl);
+  padding:28px;display:flex;flex-direction:column;gap:14px;min-height:240px;min-width:0;
+  background:var(--surface);color:var(--ink);
+  box-shadow:0 1px 0 rgb(255 255 255) inset,0 0 0 1px var(--line),0 20px 40px -32px rgb(20 34 90 / .45);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.tile:hover{transform:translateY(-3px);box-shadow:0 1px 0 #fff inset,0 0 0 1px rgb(36 81 240 / .25),0 30px 60px -34px rgb(20 34 90 / .55)}
+.tile:active{transform:translateY(-1px) scale(.995)}
+.tile .glow{position:absolute;right:-60px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle, rgb(62 108 255 / .30), rgb(62 108 255 / 0) 66%);pointer-events:none;transition:transform .8s var(--ease)}
+.tile:hover .glow{transform:translate(-14px,10px) scale(1.08)}
+.tile-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;position:relative}
+.tile .mono{color:var(--muted)}
+.tile h3{font-size:clamp(1.45rem,2.2vw,1.9rem);line-height:1.08;font-weight:600;max-width:16ch}
+.tile p{color:var(--muted);max-width:44ch;position:relative}
+.tile-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+.tile-more{font-size:.88rem;font-weight:550;color:var(--blue-600)}
+.tile .circ{width:46px;height:46px;color:var(--ink);pointer-events:none}
+.tile:hover .circ{transform:rotate(90deg)}
+.tile--feature{background:linear-gradient(160deg,#0C1A5A 0%,#0A1440 60%,#081033 100%);color:#fff;box-shadow:0 30px 60px -30px rgb(10 20 64 / .7)}
+.tile--feature h3{font-size:clamp(1.9rem,3.4vw,2.8rem);max-width:12ch}
+.tile--feature p,.tile--feature .mono{color:var(--on-dark-2)}
+.tile--feature .tile-more{color:#C9D7FF}
+.tile--feature .circ{color:#fff}
+.tile--feature .glow{right:auto;left:30%;top:auto;bottom:-180px;width:520px;height:340px;background:radial-gradient(closest-side, rgb(80 125 255 / .75), rgb(40 80 255 / 0))}
+.tile--feature .tcurve{position:absolute;inset:auto 0 0 0;height:62%;width:100%;opacity:.8;pointer-events:none}
+.t-1{grid-column:span 7;grid-row:span 2;min-height:500px}
+.t-2{grid-column:span 5}
+.t-3{grid-column:span 5}
+.t-4{grid-column:span 5}
+.t-5{grid-column:span 7}
+.t-6{grid-column:span 12;min-height:200px}
+.t-6 .tile-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.04em;padding:6px 11px;border-radius:999px;background:var(--paper);color:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line)}
+.tile--feature .chip{background:rgb(255 255 255 / .08);color:#DCE6FF;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .16)}
+
+/* ───────── Trajetória ───────── */
+.traj{position:relative;overflow:hidden}
+.traj::before{content:"";position:absolute;left:50%;bottom:-340px;width:1300px;height:600px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side, rgb(46 90 255 / .45), rgb(46 90 255 / 0));pointer-events:none}
+.traj .wrap{position:relative}
+.org{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:32px 56px;align-items:end;padding-bottom:40px;border-bottom:1px solid rgb(255 255 255 / .12);margin-bottom:40px}
+.org-name{font-size:clamp(3rem,9vw,7.6rem);line-height:.9;font-weight:600;letter-spacing:-.055em;color:#fff}
+.org-name span{display:block;color:transparent;-webkit-text-stroke:1px rgb(190 210 255 / .55)}
+.org-role{font-size:clamp(1.2rem,2vw,1.5rem);font-weight:550;line-height:1.25;color:#fff;margin-top:22px;max-width:24ch;letter-spacing:-.02em}
+.facts{display:grid;gap:0;margin:0}
+.facts div{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;padding:14px 0;border-top:1px solid rgb(255 255 255 / .12)}
+.facts dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-300);padding-top:3px}
+.facts dd{margin:0;color:#fff;font-weight:500}
+.themes-intro{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.themes-intro h3{font-size:1.4rem;font-weight:600;color:#fff}
+.themes-intro p{color:var(--on-dark-2);font-size:.92rem}
+.themes{display:grid;align-items:start;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.theme{border-radius:var(--r-lg);--g-tint:150 175 255;--g-a:.07;--g-blur:20px;color:#fff;transition:transform .4s var(--ease)}
+.theme[data-x="true"]{--g-a:.13}
+.theme h4{margin:0}
+.theme-btn{width:100%;display:flex;align-items:center;gap:16px;padding:20px 20px 20px 22px;background:none;border:0;text-align:left;cursor:pointer;border-radius:inherit}
+.theme-btn .t{flex:1;font-size:1.08rem;font-weight:600;letter-spacing:-.015em;line-height:1.25}
+.theme-btn .circ{width:36px;height:36px;color:#fff;--g-a:.08}
+.theme-btn .circ svg{transition:transform .45s var(--ease)}
+.theme[data-x="true"] .theme-btn .circ svg{transform:rotate(45deg)}
+.theme-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.theme[data-x="true"] .theme-panel{grid-template-rows:1fr}
+.theme-panel > div{overflow:hidden;min-height:0}
+.theme-panel p{padding:0 22px 22px;color:rgb(232 239 255 / .9);max-width:62ch;line-height:1.65}
+.theme-panel .chips{padding:0 22px 22px}
+.theme-panel .chip{background:rgb(255 255 255 / .08);color:#DCE6FF;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .16)}
+
+/* ───────── Conselhos ───────── */
+.boards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.board{position:relative;border-radius:var(--r-xl);padding:26px 26px 24px;background:var(--surface);box-shadow:0 0 0 1px var(--line),0 20px 40px -34px rgb(20 34 90 / .5);display:grid;gap:18px;min-width:0;transition:box-shadow .4s var(--ease),transform .4s var(--ease)}
+.board.is-hl{box-shadow:0 0 0 1.5px var(--blue-500),0 24px 50px -34px rgb(20 34 90 / .6);transform:translateY(-2px)}
+.board-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.board h3{font-size:1.5rem;font-weight:600;line-height:1.1}
+.board .org-sub{color:var(--muted);font-size:.92rem;margin-top:6px}
+.status{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;border-radius:999px;background:var(--paper);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.status i{width:7px;height:7px;border-radius:50%;background:#A3AAC4}
+.board dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding-top:16px;border-top:1px solid var(--line)}
+.board dt{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.board dd{margin:0;font-weight:550;font-size:.97rem;line-height:1.3}
+.board--current{background:linear-gradient(155deg,#0E1F6E 0%,#0A1440 70%);color:#fff;box-shadow:0 30px 60px -30px rgb(10 20 64 / .75)}
+.board--current .org-sub,.board--current dt{color:var(--on-dark-2)}
+.board--current dl{border-top-color:rgb(255 255 255 / .14)}
+.board--current .status{color:#fff;background:none;box-shadow:none;--g-tint:120 255 210;--g-a:.10}
+.board--current .status i{background:#7CF0C3;box-shadow:0 0 0 4px rgb(124 240 195 / .2);animation:pulse 2.4s ease-in-out infinite}
+.board--current::after{content:"";position:absolute;inset:auto -10% -40% 30%;height:70%;border-radius:50%;background:radial-gradient(closest-side, rgb(70 115 255 / .55), rgb(70 115 255 / 0));pointer-events:none}
+.board--current > *{position:relative;z-index:1}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgb(124 240 195 / .05)}}
+
+.tl{margin-top:22px;border-radius:var(--r-xl);padding:26px 26px 20px;background:var(--surface);box-shadow:0 0 0 1px var(--line)}
+.tl-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:18px}
+.tl-head h3{font-size:1.1rem;font-weight:600;letter-spacing:-.01em}
+.tl-head p{color:var(--muted);font-size:.86rem}
+.tl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tl-grid{position:relative;min-width:620px;padding-top:30px;display:grid;grid-template-columns:150px minmax(0,1fr);row-gap:10px}
+.tl-label{font-size:.86rem;font-weight:550;align-self:center;padding-right:12px;line-height:1.2}
+.tl-label small{display:block;color:var(--muted);font-weight:400;font-size:.76rem}
+.tl-track{position:relative;height:30px;border-radius:999px;background:repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 1px), var(--line) calc(12.5% - 1px) 12.5%)}
+.tl-bar{position:absolute;top:5px;bottom:5px;border-radius:999px;background:linear-gradient(90deg,#6F8FD8,#3F63C9);min-width:10px;transition:filter .3s}
+.tl-bar.is-current{background:linear-gradient(90deg,#2451F0 0%,#3E6CFF 70%,rgb(62 108 255 / .15) 100%)}
+.tl-row.is-hl .tl-bar{filter:brightness(1.15) saturate(1.2);box-shadow:0 0 0 2px rgb(36 81 240 / .25)}
+.tl-axis{grid-column:2;position:relative;height:22px}
+.tl-axis span{position:absolute;transform:translateX(-50%);font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.tl-mark{position:absolute;top:24px;bottom:24px;width:0;border-left:1.5px dashed rgb(36 81 240 / .55);pointer-events:none}
+.tl-mark b{position:absolute;top:-22px;left:-1px;transform:translateX(-50%);white-space:nowrap;font-family:var(--f-mono);font-size:.68rem;font-weight:500;color:var(--blue-600);background:var(--surface);padding:0 6px}
+.tl-row{display:contents}
+
+/* ───────── Formação ───────── */
+.edu{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.card{position:relative;overflow:hidden;border:0;text-align:left;cursor:pointer;border-radius:var(--r-xl);padding:26px;background:var(--surface);color:var(--ink);display:flex;flex-direction:column;gap:14px;min-width:0;
+  box-shadow:0 0 0 1px var(--line),0 20px 40px -34px rgb(20 34 90 / .5);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgb(36 81 240 / .25),0 30px 60px -36px rgb(20 34 90 / .6)}
+.card .glow{position:absolute;right:-70px;bottom:-90px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle, rgb(62 108 255 / .22), rgb(62 108 255 / 0) 66%);pointer-events:none}
+.card h3{font-size:1.35rem;font-weight:600;line-height:1.12}
+.card .mono{color:var(--blue-600)}
+.card-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative}
+.card .circ{width:40px;height:40px;pointer-events:none;color:var(--ink)}
+.card:hover .circ{transform:rotate(90deg)}
+.e-1{grid-column:span 7;grid-row:span 2}
+.e-2{grid-column:span 5}
+.e-3{grid-column:span 5}
+.e-4{grid-column:span 4}
+.e-5{grid-column:span 4}
+.e-6{grid-column:span 4;cursor:default}
+.e-6:hover{transform:none;box-shadow:0 0 0 1px var(--line),0 20px 40px -34px rgb(20 34 90 / .5)}
+.deg{list-style:none;margin:0;padding:0;display:grid}
+.deg li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.deg li:first-child{border-top:0;padding-top:4px}
+.deg .yr{font-family:var(--f-mono);font-size:.9rem;color:var(--blue-600);font-variant-numeric:tabular-nums;padding-top:1px}
+.deg b{display:block;font-weight:600;line-height:1.3}
+.deg span{color:var(--muted);font-size:.92rem}
+.list-inline{color:var(--muted);font-size:.95rem;line-height:1.55}
+.list-inline strong{color:var(--ink);font-weight:600}
+.lang{font-size:2rem;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+
+/* ───────── Contato ───────── */
+.contact{position:relative;overflow:hidden;
+  background:
+    radial-gradient(80% 70% at 50% 120%, #6E95FF 0%, #3561FF 22%, #1C3AD0 40%, rgb(17 32 106 / 0) 70%),
+    linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 70%, #0F1D66 100%);
+  color:#fff;padding-block:clamp(96px,12vw,160px) clamp(56px,7vw,80px)}
+.contact .curves{height:70%}
+.contact .wrap{position:relative}
+.contact h2{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1;font-weight:600;letter-spacing:-.045em;max-width:15ch}
+.contact-lead{color:var(--on-dark-2);margin-top:20px;max-width:52ch;font-size:1.05rem}
+.ccards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:clamp(40px,6vw,64px)}
+.ccard{border-radius:var(--r-lg);padding:22px;display:grid;gap:14px;min-width:0;--g-a:.08;--g-blur:22px}
+.ccard .mono{color:rgb(210 222 255 / .74);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
+.ccard .val{font-size:clamp(1.15rem,1.8vw,1.4rem);font-weight:600;letter-spacing:-.02em;overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}
+.ccard .acts{display:flex;flex-wrap:wrap;gap:8px}
+.ccard .cap{min-height:40px;padding:0 15px;font-size:.88rem;color:#fff}
+.toast{position:fixed;z-index:70;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 80px);transform:translateX(-50%);padding:12px 18px;border-radius:999px;color:#fff;font-size:.9rem;font-weight:550;--g-tint:12 24 80;--g-a:.6;--g-blur:20px;animation:sheet-in .35s var(--ease)}
+.foot{margin-top:clamp(64px,9vw,110px);padding-top:22px;border-top:1px solid rgb(255 255 255 / .14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:rgb(220 230 255 / .6);font-size:.84rem}
+
+/* ───────── Modal ───────── */
+dialog.modal{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:max(16px, env(safe-area-inset-top,0px)) var(--gutter-r) max(16px, env(safe-area-inset-bottom,0px)) var(--gutter-l);border:0;background:transparent;overflow-y:auto;overscroll-behavior:contain;display:none}
+dialog.modal[open]{display:grid;place-items:center}
+dialog.modal::backdrop{background:rgb(5 10 34 / .38);-webkit-backdrop-filter:blur(10px) saturate(130%);backdrop-filter:blur(10px) saturate(130%);animation:fade .45s var(--ease)}
+dialog.modal.is-closing::backdrop{animation:fade-out .3s var(--ease) forwards}
+.panel{position:relative;width:min(760px,100%);border-radius:34px;color:var(--ink);margin-block:auto;
+  --g-blur:40px;--g-sat:170%;--g-tint:246 248 255;--g-a:.78;--g-rim:1;--g-shadow:3 8 40;
+  box-shadow:0 40px 90px -30px rgb(3 8 40 / .65),0 6px 20px -6px rgb(3 8 40 / .3);
+  animation:panel-in .55s var(--ease)}
+.panel::after{animation:lens-in .55s var(--ease)}
+.is-closing .panel{animation:panel-out .28s var(--ease) forwards}
+.is-closing .panel::after{animation:lens-out .28s var(--ease) forwards}
+.panel-body{padding:clamp(26px,4vw,44px);display:grid;gap:22px;animation:body-in .6s var(--ease)}
+.is-closing .panel-body{animation:body-out .25s var(--ease) forwards}
+@keyframes fade{from{opacity:0}}
+@keyframes fade-out{to{opacity:0}}
+@keyframes panel-in{from{transform:translateY(18px) scale(.94)}}
+@keyframes panel-out{to{transform:translateY(10px) scale(.96)}}
+@keyframes lens-in{from{opacity:0}}
+@keyframes lens-out{to{opacity:0}}
+@keyframes body-in{from{opacity:0;filter:blur(10px)}}
+@keyframes body-out{to{opacity:0;filter:blur(8px)}}
+.panel-ctrl{position:absolute;z-index:3;top:16px;right:16px;display:flex;gap:8px}
+.panel-ctrl .circ{color:var(--ink)}
+.panel-ctrl .circ[hidden]{display:none}
+.m-kicker{color:var(--blue-600);padding-right:150px}
+.m-title{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.04;font-weight:600;letter-spacing:-.04em;margin-top:10px;padding-right:20px}
+.m-lead{font-size:1.1rem;line-height:1.55;color:var(--ink-2);max-width:60ch}
+.m-blocks{display:grid;gap:12px}
+.m-block{border-radius:20px;padding:18px 20px;background:rgb(255 255 255 / .72);box-shadow:inset 0 0 0 1px rgb(20 34 90 / .07)}
+.m-block h4{font-size:.74rem;font-family:var(--f-mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.m-block p{color:var(--ink);line-height:1.6;max-width:64ch}
+.m-block ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.m-block li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline}
+.m-block li b{font-weight:600}
+.m-block li span{color:var(--muted);font-size:.92rem}
+.m-block li .mono{color:var(--blue-600);font-size:.8rem;white-space:nowrap}
+.m-src{font-size:.82rem;color:var(--muted);padding-top:4px;border-top:1px solid rgb(20 34 90 / .1)}
+.m-pos{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* ───────── Responsive ───────── */
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .bubbles{height:auto;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-bottom:40px}
+  .bub{position:relative;inset:auto;width:auto;--d:0 !important}
+  .hero-note{left:0;bottom:0}
+  .t-1{grid-column:span 12;min-height:420px;grid-row:auto}
+  .t-2,.t-3,.t-4,.t-5{grid-column:span 6}
+  .e-1{grid-column:span 12;grid-row:auto}
+  .e-2,.e-3{grid-column:span 6}
+}
+@media (max-width:900px){
+  .nav-links{display:none}
+  .nav-cur,.nav-menu{display:inline-flex}
+  .nav-menu{display:flex;flex-direction:column;justify-content:center;align-items:center}
+  .nav{gap:4px;padding:5px}
+  .head,.org{grid-template-columns:minmax(0,1fr)}
+  .themes{grid-template-columns:minmax(0,1fr)}
+  .boards{grid-template-columns:minmax(0,1fr)}
+  .ccards{grid-template-columns:minmax(0,1fr)}
+  .e-4,.e-5,.e-6{grid-column:span 6}
+  .e-6{grid-column:span 12}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .hero{min-height:0}
+  .hero .wrap{padding-block:116px 56px;gap:30px}
+  .bubbles{grid-template-columns:minmax(0,1fr);padding-bottom:44px}
+  .bub{padding:16px 18px;border-radius:22px;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:14px;animation:none}
+  .bub .mono{grid-column:1 / -1;margin-bottom:2px}
+  .bub-k{font-size:1.9rem}
+  .bub--3 .bub-k{grid-column:1 / -1}
+  .bub--3 .bub-v{grid-column:1 / -1}
+  .t-2,.t-3,.t-4,.t-5,.t-6{grid-column:span 12}
+  .t-1{min-height:380px}
+  .t-6 .tile-inner{grid-template-columns:minmax(0,1fr)}
+  .tile{padding:22px;min-height:0;border-radius:26px}
+  .board{padding:22px}
+  .board dl{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .board dl div:last-child{grid-column:1 / -1}
+  .e-2,.e-3,.e-4,.e-5{grid-column:span 12}
+  .panel{border-radius:28px}
+  .m-kicker{padding-right:130px}
+  .m-pos{display:none}
+  .panel-ctrl{top:12px;right:12px;gap:6px}
+  .panel-ctrl .circ{width:40px;height:40px}
+  .m-block li{grid-template-columns:minmax(0,1fr)}
+  .fab .lbl{display:none}
+  .fab{padding:0 14px}
+  .org-name{font-size:clamp(2.7rem,15vw,4rem)}
+}
+@media (hover:none){
+  .tile:hover,.card:hover,.cap:hover,.circ:hover{transform:none}
+}
+@media (pointer:coarse){
+  .glass{--g-blur:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .bub{transform:none !important}
+}
+</style>
+</head>
+<body>
+
+<!-- Edge-refraction lens (Chromium only, applied through backdrop-filter). The map is neutral grey in the middle and bends light only near the rim. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="lg-edge" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feImage preserveAspectRatio="none" result="map" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='x'%3E%3Cstop offset='0' stop-color='%23ff0000'/%3E%3Cstop offset='.14' stop-color='%23800000'/%3E%3Cstop offset='.86' stop-color='%23800000'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3ClinearGradient id='y' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300ff00'/%3E%3Cstop offset='.2' stop-color='%23008000'/%3E%3Cstop offset='.8' stop-color='%23008000'/%3E%3Cstop offset='1' stop-color='%23000000'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23x)'/%3E%3Crect width='100' height='100' fill='url(%23y)' style='mix-blend-mode:screen'/%3E%3C/svg%3E"/>
+      <feGaussianBlur in="map" stdDeviation="1.2" result="soft"/>
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<a class="skip" href="#especialidades">Pular para o conteúdo</a>
+
+<nav class="nav glass" id="nav" data-tone="dark" aria-label="Seções">
+  <a class="brand" href="#inicio" aria-label="Início — Alexandre Ribeiro Barbosa">ARB</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#especialidades">Especialidades</a></li>
+    <li><a href="#trajetoria">Trajetória</a></li>
+    <li><a href="#conselhos">Conselhos</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li class="nav-ind" id="navInd" aria-hidden="true"></li>
+  </ul>
+  <span class="nav-cur" id="navCur" aria-hidden="true">Início</span>
+  <button class="circ nav-menu" id="navMenu" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Abrir menu de seções"><span></span><span></span></button>
+</nav>
+<div class="sheet glass" id="sheet" hidden>
+  <ul>
+    <li><a href="#inicio">Início <span class="mono">01</span></a></li>
+    <li><a href="#especialidades">Especialidades <span class="mono">02</span></a></li>
+    <li><a href="#trajetoria">Trajetória <span class="mono">03</span></a></li>
+    <li><a href="#conselhos">Conselhos e comitês <span class="mono">04</span></a></li>
+    <li><a href="#formacao">Formação <span class="mono">05</span></a></li>
+    <li><a href="#contato">Contato <span class="mono">06</span></a></li>
+  </ul>
+</div>
+
+<a class="fab cap glass" id="fab" href="#contato" data-hidden="true" aria-label="Ir para contato"><span class="dot" aria-hidden="true"></span><span class="lbl">Contato</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
+
+<main>
+<!-- 1 · Apresentação -->
+<header class="hero" id="inicio" data-tone="dark">
+  <div class="hero-light" aria-hidden="true">
+    <div class="orb orb--a"></div>
+    <div class="orb orb--b"></div>
+    <div class="orb orb--c"></div>
+    <svg class="curves" viewBox="0 0 1440 600" preserveAspectRatio="none">
+      <path d="M0 520 C 220 470, 380 330, 620 300 S 1080 250, 1440 230" stroke="rgb(170 200 255 / .26)"/>
+      <path d="M0 560 C 260 520, 420 400, 660 360 S 1100 300, 1440 290" stroke="rgb(170 200 255 / .18)"/>
+      <path d="M0 470 C 200 420, 360 250, 600 230 S 1040 190, 1440 170" stroke="rgb(170 200 255 / .14)"/>
+      <path d="M0 590 C 300 570, 480 470, 720 430 S 1120 360, 1440 350" stroke="rgb(200 220 255 / .30)"/>
+      <path d="M0 420 C 180 360, 340 170, 580 160 S 1000 130, 1440 110" stroke="rgb(170 200 255 / .09)"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="hero-id">
+        <p class="hero-name">Alexandre Ribeiro Barbosa</p>
+        <p class="eyebrow hero-role">Executivo de Finanças · Tesouraria Global · Governança</p>
+      </div>
+      <h1>Experiência para decisões financeiras <em>complexas.</em></h1>
+      <p class="hero-lead">Trajetória de aproximadamente 38 anos no Banco do Brasil, com dez anos como Gerente Executivo em Tesouraria Global e Finanças. Experiência nos mercados local e internacional, conectando gestão financeira, riscos e governança corporativa.</p>
+      <div class="hero-cta">
+        <a class="cap cap--solid glass" href="#trajetoria" data-sheen>Explorar trajetória
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+        <a class="cap cap--ghost glass" href="#contato" data-sheen>Entrar em contato</a>
+      </div>
+    </div>
+
+    <div class="bubbles" id="bubbles" aria-label="Destaques da trajetória">
+      <div class="bub bub--1 glass" data-sheen>
+        <span class="mono">Banco do Brasil</span>
+        <span class="bub-k">38 anos</span>
+        <span class="bub-v">de trajetória aproximada no Banco do Brasil</span>
+      </div>
+      <div class="bub bub--2 glass" data-sheen>
+        <span class="mono">Função executiva</span>
+        <span class="bub-k">10 anos</span>
+        <span class="bub-v">como Gerente Executivo</span>
+      </div>
+      <div class="bub bub--3 glass" data-sheen>
+        <span class="mono">Governança</span>
+        <span class="bub-k">Atuação em conselhos e comitês</span>
+        <span class="bub-v">Fiscal · Auditoria · Finanças</span>
+      </div>
+      <p class="hero-note">Os períodos se referem à trajetória no Banco do Brasil, encerrada em junho de 2024.</p>
+    </div>
+  </div>
+</header>
+
+<!-- 2 · Especialidades -->
+<section class="band" id="especialidades" data-tone="light" aria-labelledby="h-esp">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Especialidades</span><h2 id="h-esp">Tesouraria, balanço e governança em uma mesma visão.</h2></div>
+      <p>Seis frentes que organizam a experiência executiva. Selecione um cartão para ver as atribuições descritas no currículo.</p>
+    </div>
+    <div class="bento">
+      <button class="tile tile--feature t-1" type="button" data-open="esp-tesouraria" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <svg class="tcurve" viewBox="0 0 700 300" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 280 C 140 250, 230 150, 380 130 S 600 110, 700 100" fill="none" stroke="rgb(170 200 255 / .45)" stroke-width="1.2"/>
+          <path d="M0 295 C 160 280, 260 200, 400 175 S 610 150, 700 145" fill="none" stroke="rgb(170 200 255 / .25)" stroke-width="1.2"/>
+          <path d="M0 260 C 120 220, 210 100, 360 85 S 590 65, 700 55" fill="none" stroke="rgb(170 200 255 / .18)" stroke-width="1.2"/>
+        </svg>
+        <span class="tile-top"><span class="mono">Reais e moedas estrangeiras</span></span>
+        <h3>Tesouraria global</h3>
+        <p>Liquidez em reais e moedas estrangeiras e fluxo de caixa do banco e de suas subsidiárias.</p>
+        <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+          <span class="circ glass" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="tile t-2" type="button" data-open="esp-alm" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="tile-top"><span class="mono">Prazo · Moeda · Indexador</span></span>
+        <h3>Gestão de ativos e passivos — ALM</h3>
+        <p>Descasamentos de balanço com foco em margem e estabilidade financeira.</p>
+        <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+          <span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="tile t-3" type="button" data-open="esp-liquidez" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="tile-top"><span class="mono">LCR · NSFR · Payout</span></span>
+        <h3>Liquidez e estrutura de capital</h3>
+        <p>Liquidez, fluxo de caixa, otimização de capital e estratégia de payout.</p>
+        <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+          <span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="tile t-4" type="button" data-open="esp-captacoes" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="tile-top"><span class="mono">Sêniores · AT1</span></span>
+        <h3>Captações locais e internacionais</h3>
+        <p>Letras Financeiras, bonds internacionais e captações interbancárias bilaterais.</p>
+        <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+          <span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="tile t-5" type="button" data-open="esp-portfolios" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="tile-top"><span class="mono">FRTB · IRRBB</span></span>
+        <h3>Portfólios, derivativos e riscos</h3>
+        <p>Títulos locais e estrangeiros, ações, moedas, commodities agrícolas e derivativos; riscos de mercado, juros e liquidez.</p>
+        <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+          <span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="tile t-6" type="button" data-open="esp-governanca" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="tile-inner">
+          <span style="display:grid;gap:12px">
+            <span class="mono">Conselhos fiscais · Comitês</span>
+            <h3>Governança corporativa</h3>
+          </span>
+          <span style="display:grid;gap:16px">
+            <p>Atuação em conselhos fiscais e comitês de auditoria e finanças, com formação executiva no IBGC.</p>
+            <span class="tile-foot"><span class="tile-more">Ver detalhes</span>
+              <span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · Trajetória executiva -->
+<section class="band band--dark traj" id="trajetoria" data-tone="dark" aria-labelledby="h-traj">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Trajetória executiva</span><h2 id="h-traj" class="sr">Trajetória executiva</h2></div>
+    </div>
+    <div class="org">
+      <div>
+        <p class="org-name" aria-hidden="true">Banco do<span>Brasil S.A.</span></p>
+        <p class="sr">Banco do Brasil S.A.</p>
+        <p class="org-role">Gerente Executivo — Tesouraria Global e Diretoria de Finanças</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Na função</dt><dd>Dez anos</dd></div>
+        <div><dt>Na instituição</dt><dd>Aproximadamente 38 anos</dd></div>
+        <div><dt>Encerramento</dt><dd>Junho de 2024</dd></div>
+        <div><dt>Mercados</dt><dd>Local e internacional</dd></div>
+      </dl>
+    </div>
+    <div class="themes-intro">
+      <h3>Responsabilidades por tema</h3>
+      <p>Organizadas por assunto, sem ordem cronológica.</p>
+    </div>
+    <div class="themes" id="themes"></div>
+  </div>
+</section>
+
+<!-- 4 · Conselhos e comitês -->
+<section class="band" id="conselhos" data-tone="light" aria-labelledby="h-cons">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Conselhos e comitês</span><h2 id="h-cons">Atuação como membro titular em colegiados.</h2></div>
+      <p>Participação em conselhos fiscais e em comitês de auditoria e finanças, com os períodos registrados no currículo.</p>
+    </div>
+    <div class="boards" id="boards"></div>
+    <div class="tl" aria-labelledby="h-tl">
+      <div class="tl-head"><h3 id="h-tl">Mandatos no tempo</h3><p>Escala de 2019 a 2026</p></div>
+      <div class="tl-scroll"><div class="tl-grid" id="tl" role="img" aria-label="Linha do tempo dos mandatos: Brasilcap de out/2019 a jul/2020; Cateno de dez/2019 a jun/2024; Randoncorp de mai/2025 a mai/2026; GRU Airport desde mai/2026."></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Formação e atuação institucional -->
+<section class="band band--paper2" id="formacao" data-tone="light" aria-labelledby="h-form">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="eyebrow">Formação e atuação institucional</span><h2 id="h-form">Base acadêmica, formação executiva e participação no mercado.</h2></div>
+      <p>Instituições, títulos e datas conforme o currículo. Selecione um grupo para ver o detalhamento.</p>
+    </div>
+    <div class="edu">
+      <button class="card e-1" type="button" data-open="form-academica" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="mono">Formação acadêmica</span>
+        <ul class="deg">
+          <li><span class="yr">2007</span><span><b>Mestrado em Administração — Finanças</b><span>IBMEC-RJ</span></span></li>
+          <li><span class="yr">2001</span><span><b>MBA Executivo em Finanças</b><span>IBMEC-RJ</span></span></li>
+          <li><span class="yr">1997</span><span><b>Bacharelado em Ciências Contábeis</b><span>Faculdade Moraes Junior</span></span></li>
+          <li><span class="yr">1991</span><span><b>Tecnólogo em Processamento de Dados</b><span>Faculdade Celso Lisboa</span></span></li>
+        </ul>
+        <span class="card-foot"><span class="tile-more">Ver detalhes</span><span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="card e-2" type="button" data-open="form-executiva" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="mono">Formação executiva</span>
+        <h3>IBGC · Chicago Booth · INSPER</h3>
+        <p class="list-inline">Governança corporativa, conselhos de administração, comitê de auditoria, sistema financeiro e desenvolvimento de executivos.</p>
+        <span class="card-foot"><span class="tile-more">Ver detalhes</span><span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="card e-3" type="button" data-open="form-cert" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="mono">Certificações</span>
+        <h3>ANBIMA</h3>
+        <p class="list-inline"><strong>CGA · CFG · CPA-20</strong>, conforme listadas no currículo.</p>
+        <span class="card-foot"><span class="tile-more">Ver detalhes</span><span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="card e-4" type="button" data-open="form-docencia" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="mono">Docência</span>
+        <h3>Professor em cursos da ANBIMA</h3>
+        <span class="card-foot"><span class="tile-more">Ver detalhes</span><span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <button class="card e-5" type="button" data-open="form-inst" aria-haspopup="dialog">
+        <span class="glow" aria-hidden="true"></span>
+        <span class="mono">Atuação institucional</span>
+        <h3>ANBIMA · FEBRABAN · FGC</h3>
+        <span class="card-foot"><span class="tile-more">Ver detalhes</span><span class="circ glass glass--onlight" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+      </button>
+      <div class="card e-6">
+        <span class="mono">Idioma</span>
+        <p class="lang">Inglês avançado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Contato -->
+<section class="contact" id="contato" data-tone="dark" aria-labelledby="h-contato">
+  <div class="hero-light" aria-hidden="true">
+    <svg class="curves" viewBox="0 0 1440 600" preserveAspectRatio="none">
+      <path d="M0 540 C 260 500, 420 380, 680 350 S 1100 300, 1440 280" stroke="rgb(170 200 255 / .22)"/>
+      <path d="M0 580 C 300 560, 480 460, 720 420 S 1120 350, 1440 340" stroke="rgb(200 220 255 / .26)"/>
+      <path d="M0 480 C 220 430, 380 280, 640 260 S 1060 220, 1440 200" stroke="rgb(170 200 255 / .12)"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--blue-300)">Contato</span>
+    <h2 id="h-contato" style="margin-top:16px">Vamos conversar sobre finanças e governança.</h2>
+    <p class="contact-lead">Telefone e e-mail conforme o currículo. Use os botões para copiar ou abrir no seu aplicativo.</p>
+    <div class="ccards">
+      <div class="ccard glass" data-sheen>
+        <span class="mono">Telefone</span>
+        <span class="val" id="v-tel">(21) 98940-1800</span>
+        <span class="acts">
+          <button class="cap glass" type="button" data-copy="(21) 98940-1800" data-label="Telefone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Copiar</button>
+          <a class="cap glass" href="tel:+5521989401800">Ligar</a>
+        </span>
+      </div>
+      <div class="ccard glass" data-sheen>
+        <span class="mono">E-mail</span>
+        <span class="val" id="v-mail">alexribeiro1818@gmail.com</span>
+        <span class="acts">
+          <button class="cap glass" type="button" data-copy="alexribeiro1818@gmail.com" data-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Copiar</button>
+          <a class="cap glass" href="mailto:alexribeiro1818@gmail.com">Escrever</a>
+        </span>
+      </div>
+      <div class="ccard glass" data-sheen>
+        <span class="mono">Localização</span>
+        <span class="val">Rio de Janeiro — RJ</span>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Alexandre Ribeiro Barbosa · Executivo de Finanças</span>
+      <span>Conteúdo baseado no currículo profissional</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<dialog class="modal" id="modal" aria-labelledby="m-title">
+  <div class="panel glass" id="panel">
+    <div class="panel-ctrl">
+      <button class="circ glass glass--onlight" type="button" id="m-prev" aria-label="Item anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="circ glass glass--onlight" type="button" id="m-next" aria-label="Próximo item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+      <button class="circ glass glass--onlight" type="button" id="m-close" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="panel-body" id="m-body"></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+
+  /* Edge refraction only where backdrop-filter accepts SVG filters (Chromium, desktop). */
+  try {
+    const brands = (navigator.userAgentData && navigator.userAgentData.brands) || [];
+    if (brands.some(b => /Chromium/i.test(b.brand)) && fine.matches) document.documentElement.classList.add('refract');
+  } catch (e) {}
+
+  /* ───── Content (taken from the CV) ───── */
+  const BOARDS = [
+    { org:'GRU Airport S.A.', sub:'', body:'Comitê de Auditoria', role:'Membro titular', period:'desde mai/2026', start:[2026,5], end:null, current:true },
+    { org:'Randoncorp S.A.', sub:'', body:'Conselho Fiscal', role:'Membro titular', period:'mai/2025 a mai/2026', start:[2025,5], end:[2026,5] },
+    { org:'Cateno', sub:'Gestão de Contas de Pagamentos S.A.', body:'Comitê Financeiro', role:'Membro titular', period:'dez/2019 a jun/2024', start:[2019,12], end:[2024,6] },
+    { org:'Brasilcap', sub:'Capitalização S.A.', body:'Conselho Fiscal', role:'Membro titular', period:'out/2019 a jul/2020', start:[2019,10], end:[2020,7] },
+  ];
+
+  const THEMES = [
+    { t:'Liderança em tesouraria e gestão financeira', p:'Head da Mesa de Operações Financeiras e Gestão de Carteiras de Títulos e das atividades de ALM, Liquidez e Capital.' },
+    { t:'Tesouraria global', p:'Responsabilidade pela liquidez em reais e moedas estrangeiras e pelo fluxo de caixa do banco e de suas subsidiárias.' },
+    { t:'ALM e capital', p:'Gestão de descasamentos de balanço por prazo, moeda e indexador, com foco em margem e estabilidade financeira; otimização de capital e estratégia de payout.' },
+    { t:'Captações estruturadas', p:'Estruturação e gestão de Letras Financeiras e bonds internacionais, sêniores e AT1, e captações interbancárias bilaterais.', chips:['Letras Financeiras','Bonds sêniores','AT1','Interbancárias bilaterais'] },
+    { t:'Portfólios, derivativos e produtos', p:'Gestão de títulos locais e estrangeiros, ações, moedas e commodities agrícolas; derivativos para posições proprietárias e clientes. Gestão de produtos com foco em distribuição, operação, conformidade e resultados.' },
+    { t:'Gestão de riscos', p:'Identificação e mitigação de riscos de mercado, juros e liquidez, com atuação envolvendo FRTB, IRRBB, LCR, NSFR e demais indicadores.', chips:['FRTB','IRRBB','LCR','NSFR'] },
+  ];
+
+  const ROLE = 'Gerente Executivo — Tesouraria Global e Diretoria de Finanças, Banco do Brasil S.A.';
+  const DETAILS = {
+    'esp-tesouraria': { group:'esp', kicker:'Especialidade', title:'Tesouraria global',
+      lead:'Responsabilidade pela liquidez em reais e moedas estrangeiras e pelo fluxo de caixa do banco e de suas subsidiárias.',
+      blocks:[
+        { h:'Liderança', p:'Head da Mesa de Operações Financeiras e Gestão de Carteiras de Títulos e das atividades de ALM, Liquidez e Capital.' },
+        { h:'Função', p:'Gerente Executivo na Tesouraria Global e na Diretoria de Finanças do Banco do Brasil, por dez anos. Experiência nos mercados local e internacional.' },
+        { h:'Atuação institucional relacionada', list:[
+          ['ANBIMA', 'Comitê de Assuntos de Tesouraria'],
+          ['FEBRABAN', 'Comissão de Tesouraria'],
+          ['Docência ANBIMA', 'Curso Tesouraria — Estrutura e Funções'] ] } ],
+      src:ROLE },
+    'esp-alm': { group:'esp', kicker:'Especialidade', title:'Gestão de ativos e passivos — ALM',
+      lead:'Gestão de descasamentos de balanço por prazo, moeda e indexador, com foco em margem e estabilidade financeira.',
+      blocks:[
+        { h:'Liderança', p:'Head das atividades de ALM, Liquidez e Capital, ao lado da Mesa de Operações Financeiras e da Gestão de Carteiras de Títulos.' },
+        { h:'Capital', p:'Otimização de capital e estratégia de payout.' },
+        { h:'Riscos relacionados', p:'Riscos de mercado, juros e liquidez, com atuação envolvendo IRRBB e demais indicadores.' } ],
+      chips:['Prazo','Moeda','Indexador','Margem','Estabilidade financeira'], src:ROLE },
+    'esp-liquidez': { group:'esp', kicker:'Especialidade', title:'Liquidez e estrutura de capital',
+      lead:'Liquidez em reais e moedas estrangeiras, fluxo de caixa e otimização de capital.',
+      blocks:[
+        { h:'Liquidez', p:'Responsabilidade pela liquidez em reais e moedas estrangeiras e pelo fluxo de caixa do banco e de suas subsidiárias.' },
+        { h:'Capital', p:'Otimização de capital e estratégia de payout.' },
+        { h:'Indicadores', p:'Atuação envolvendo LCR, NSFR e demais indicadores de risco de liquidez.' } ],
+      chips:['LCR','NSFR','Payout'], src:ROLE },
+    'esp-captacoes': { group:'esp', kicker:'Especialidade', title:'Captações locais e internacionais',
+      lead:'Estruturação e gestão de Letras Financeiras e bonds internacionais, sêniores e AT1, e captações interbancárias bilaterais.',
+      blocks:[
+        { h:'Instrumentos', list:[
+          ['Letras Financeiras', 'Estruturação e gestão'],
+          ['Bonds internacionais', 'Sêniores e AT1'],
+          ['Captações interbancárias', 'Bilaterais'] ] },
+        { h:'Mercados', p:'Experiência nos mercados local e internacional.' } ],
+      src:ROLE },
+    'esp-portfolios': { group:'esp', kicker:'Especialidade', title:'Portfólios, derivativos e riscos',
+      lead:'Gestão de carteiras e derivativos, com identificação e mitigação de riscos de mercado, juros e liquidez.',
+      blocks:[
+        { h:'Portfólios', p:'Gestão de títulos locais e estrangeiros, ações, moedas e commodities agrícolas.' },
+        { h:'Derivativos', p:'Derivativos para posições proprietárias e clientes.' },
+        { h:'Produtos', p:'Gestão de produtos com foco em distribuição, operação, conformidade e resultados.' },
+        { h:'Riscos', p:'Identificação e mitigação de riscos de mercado, juros e liquidez, com atuação envolvendo FRTB, IRRBB, LCR, NSFR e demais indicadores.' },
+        { h:'Atuação institucional relacionada', list:[
+          ['ANBIMA', 'Comitês de Negociação de Instrumentos Financeiros e de Precificação de Ativos Financeiros'],
+          ['FEBRABAN', 'Comissão de Riscos'] ] } ],
+      src:ROLE },
+    'esp-governanca': { group:'esp', kicker:'Especialidade', title:'Governança corporativa',
+      lead:'Atuação em conselhos fiscais e comitês de auditoria e finanças.',
+      blocks:[
+        { h:'Conselhos e comitês', list: BOARDS.map(b => [b.org + ' · ' + b.body, b.role, b.period]) },
+        { h:'Formação executiva · IBGC', list:[['Governança Corporativa',''],['Conselheiros de Administração',''],['Comitê de Auditoria','']] },
+        { h:'Participação institucional', p:'FGC: participação em Grupo Técnico do Conselho Consultivo.' } ],
+      src:'Seções Conselhos e Comitês, Formação Executiva e Atuação Institucional do currículo.' },
+
+    'form-academica': { group:'form', kicker:'Formação acadêmica', title:'Graduação e pós-graduação',
+      blocks:[{ h:'Títulos', list:[
+        ['Mestrado em Administração — Finanças','IBMEC-RJ','2007'],
+        ['MBA Executivo em Finanças','IBMEC-RJ','2001'],
+        ['Bacharelado em Ciências Contábeis','Faculdade Moraes Junior','1997'],
+        ['Tecnólogo em Processamento de Dados','Faculdade Celso Lisboa','1991'] ] }],
+      src:'Seção Formação Acadêmica do currículo.' },
+    'form-executiva': { group:'form', kicker:'Formação executiva', title:'IBGC, Chicago Booth e INSPER',
+      blocks:[
+        { h:'IBGC', list:[['Governança Corporativa',''],['Conselheiros de Administração',''],['Comitê de Auditoria','']] },
+        { h:'Chicago Booth · Executive Education', p:'Sistema financeiro, banking, finanças, administração, economia e negócios.' },
+        { h:'INSPER', p:'Desenvolvimento de Executivos do Banco do Brasil: banking, gestão global, liderança, estratégia e inovação.' } ],
+      src:'Seção Formação Executiva do currículo. O currículo não informa datas para estes programas.' },
+    'form-cert': { group:'form', kicker:'Certificações', title:'ANBIMA',
+      blocks:[{ h:'Certificações listadas', list:[['CGA',''],['CFG',''],['CPA-20','']] }],
+      src:'Certificações conforme o currículo. Datas e situação de validade não são informadas.' },
+    'form-docencia': { group:'form', kicker:'Docência', title:'Professor em cursos da ANBIMA',
+      blocks:[{ h:'Cursos', list:[['Introdução aos Fundos de Investimento',''],['Tesouraria — Estrutura e Funções','']] }],
+      src:'Seção Atuação Institucional e Docência do currículo.' },
+    'form-inst': { group:'form', kicker:'Atuação institucional', title:'ANBIMA, FEBRABAN e FGC',
+      blocks:[
+        { h:'ANBIMA', p:'Participação nos comitês de Assuntos de Tesouraria, Negociação de Instrumentos Financeiros e Precificação de Ativos Financeiros.' },
+        { h:'FEBRABAN', p:'Membro das comissões de Tesouraria e de Riscos.' },
+        { h:'FGC', p:'Participação em Grupo Técnico do Conselho Consultivo.' } ],
+      src:'Seção Atuação Institucional e Docência do currículo.' },
+  };
+  const GROUPS = { esp: Object.keys(DETAILS).filter(k => DETAILS[k].group === 'esp'), form: Object.keys(DETAILS).filter(k => DETAILS[k].group === 'form') };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const PLUS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>';
+
+  /* ───── Trajetória accordion ───── */
+  const themesEl = $('#themes');
+  themesEl.innerHTML = THEMES.map((t, i) => `
+    <div class="theme glass" data-x="${i === 0}" data-sheen>
+      <h4><button class="theme-btn" type="button" id="tb-${i}" aria-expanded="${i === 0}" aria-controls="tp-${i}">
+        <span class="t">${esc(t.t)}</span><span class="circ glass" aria-hidden="true">${PLUS}</span></button></h4>
+      <div class="theme-panel" id="tp-${i}" role="region" aria-labelledby="tb-${i}"><div>
+        <p>${esc(t.p)}</p>${t.chips ? `<div class="chips">${t.chips.map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>` : ''}
+      </div></div>
+    </div>`).join('');
+  const syncPanels = () => $$('.theme', themesEl).forEach(th => { const open = th.dataset.x === 'true'; $('.theme-panel', th).inert = !open; });
+  syncPanels();
+  themesEl.addEventListener('click', e => {
+    const btn = e.target.closest('.theme-btn'); if (!btn) return;
+    const th = btn.closest('.theme'); const open = th.dataset.x !== 'true';
+    th.dataset.x = open; btn.setAttribute('aria-expanded', open); syncPanels();
+  });
+
+  /* ───── Boards + timeline ───── */
+  $('#boards').innerHTML = BOARDS.map((b, i) => `
+    <article class="board ${b.current ? 'board--current' : ''}" data-i="${i}">
+      <div class="board-top">
+        <div><h3>${esc(b.org)}</h3>${b.sub ? `<p class="org-sub">${esc(b.sub)}</p>` : ''}</div>
+        <span class="status ${b.current ? 'glass' : ''}"><i></i>${b.current ? 'Mandato atual' : 'Encerrado'}</span>
+      </div>
+      <dl>
+        <div><dt>Colegiado</dt><dd>${esc(b.body)}</dd></div>
+        <div><dt>Função</dt><dd>${esc(b.role)}</dd></div>
+        <div><dt>Período</dt><dd>${esc(b.period)}</dd></div>
+      </dl>
+    </article>`).join('');
+
+  const Y0 = 2019, Y1 = 2027, SPAN = (Y1 - Y0) * 12;
+  const pos = ([y, m]) => ((y - Y0) * 12 + (m - 1)) / SPAN * 100;
+  const NOW = [2026, 11]; // presentation date reference for the open-ended current mandate
+  const order = [3, 2, 1, 0];
+  let tl = order.map(i => {
+    const b = BOARDS[i]; const s = pos(b.start); const e = b.end ? pos(b.end) + 100 / SPAN : pos(NOW) + 100 / SPAN;
+    return `<div class="tl-row" data-i="${i}"><div class="tl-label">${esc(b.org)}<small>${esc(b.period)}</small></div>
+      <div class="tl-track"><span class="tl-bar ${b.current ? 'is-current' : ''}" style="left:${s.toFixed(2)}%;width:${(e - s).toFixed(2)}%"></span></div></div>`;
+  }).join('');
+  let axis = '';
+  for (let y = Y0; y < Y1; y++) axis += `<span style="left:${((y - Y0) * 12 / SPAN * 100).toFixed(2)}%">${y}</span>`;
+  tl += `<div></div><div class="tl-axis">${axis}</div>`;
+  const tlEl = $('#tl'); tlEl.innerHTML = tl;
+  const mark = document.createElement('div'); mark.className = 'tl-mark';
+  mark.innerHTML = '<b>Fim da trajetória no BB · jun/2024</b>';
+  tlEl.appendChild(mark);
+  const placeMark = () => { const tr = $('.tl-track', tlEl); if (!tr) return; mark.style.left = (tr.offsetLeft + tr.offsetWidth * (pos([2024, 6]) + 100 / SPAN) / 100) + 'px'; };
+  placeMark(); addEventListener('resize', placeMark);
+
+  const hl = (i, on) => { $$(`[data-i="${i}"]`).forEach(el => el.classList.toggle('is-hl', on)); };
+  $$('.board, .tl-row').forEach(el => {
+    el.addEventListener('pointerenter', () => hl(el.dataset.i, true));
+    el.addEventListener('pointerleave', () => hl(el.dataset.i, false));
+  });
+
+  /* ───── Pointer sheen on glass ───── */
+  if (fine.matches) {
+    let raf = 0, last;
+    document.addEventListener('pointermove', e => {
+      last = e; if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0; const g = last.target.closest && last.target.closest('[data-sheen], .cap.glass, .circ.glass, .nav');
+        if (!g) return; const r = g.getBoundingClientRect();
+        g.style.setProperty('--mx', ((last.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+        g.style.setProperty('--my', ((last.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+      });
+    }, { passive: true });
+  }
+
+  /* ───── Hero depth (pointer + scroll) ───── */
+  const hero = $('#inicio'), bubbles = $('#bubbles');
+  const wide = matchMedia('(min-width: 1021px)');
+  if (!reduce.matches) {
+    hero.addEventListener('pointermove', e => {
+      if (!fine.matches || !wide.matches) return;
+      const r = hero.getBoundingClientRect();
+      bubbles.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5).toFixed(3));
+      bubbles.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5).toFixed(3));
+    });
+    hero.addEventListener('pointerleave', () => { bubbles.style.setProperty('--px', 0); bubbles.style.setProperty('--py', 0); });
+  }
+
+  /* ───── Nav: active section, tone under the glass, indicator ───── */
+  const nav = $('#nav'), ind = $('#navInd'), cur = $('#navCur'), fab = $('#fab');
+  const sections = $$('main > [id]');
+  const NAMES = { inicio:'Início', especialidades:'Especialidades', trajetoria:'Trajetória', conselhos:'Conselhos', formacao:'Formação', contato:'Contato' };
+  let active = '';
+  const moveInd = () => {
+    const a = $(`#navLinks a[href="#${active}"]`);
+    if (!a) { ind.style.opacity = 0; return; }
+    ind.style.opacity = 1; ind.style.width = a.offsetWidth + 'px'; ind.style.transform = `translateX(${a.offsetLeft}px)`;
+  };
+  const onScroll = () => {
+    const probe = nav.getBoundingClientRect().top + nav.offsetHeight / 2;
+    const mid = innerHeight * 0.38;
+    let toneSec = sections[0], actSec = sections[0];
+    for (const s of sections) { const r = s.getBoundingClientRect(); if (r.top <= probe && r.bottom > probe) toneSec = s; if (r.top <= mid) actSec = s; }
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) actSec = sections[sections.length - 1];
+    nav.dataset.tone = toneSec.dataset.tone || 'dark';
+    if (actSec.id !== active) {
+      active = actSec.id;
+      $$('#navLinks a, #sheet a').forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + active ? 'true' : 'false'));
+      cur.textContent = NAMES[active] || '';
+      moveInd();
+    }
+    const heroGone = hero.getBoundingClientRect().bottom < innerHeight * .45;
+    const contactIn = $('#contato').getBoundingClientRect().top < innerHeight * .85;
+    fab.dataset.hidden = (!heroGone || contactIn) ? 'true' : 'false';
+    fab.tabIndex = fab.dataset.hidden === 'true' ? -1 : 0;
+    if (!reduce.matches && wide.matches) bubbles.style.setProperty('--sy', Math.min(scrollY, 900).toFixed(0));
+  };
+  let sRaf = 0;
+  addEventListener('scroll', () => { if (!sRaf) sRaf = requestAnimationFrame(() => { sRaf = 0; onScroll(); }); }, { passive: true });
+  addEventListener('resize', () => { moveInd(); onScroll(); });
+  onScroll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { moveInd(); placeMark(); });
+
+  /* ───── Mobile sheet ───── */
+  const menuBtn = $('#navMenu'), sheet = $('#sheet');
+  const setSheet = open => {
+    sheet.hidden = !open; menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Fechar menu de seções' : 'Abrir menu de seções');
+    if (open) { const a = $('a[aria-current="true"]', sheet) || $('a', sheet); a.focus(); }
+  };
+  menuBtn.addEventListener('click', () => setSheet(sheet.hidden));
+  sheet.addEventListener('click', e => { if (e.target.closest('a')) setSheet(false); });
+  document.addEventListener('click', e => { if (!sheet.hidden && !sheet.contains(e.target) && !menuBtn.contains(e.target)) setSheet(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) { setSheet(false); menuBtn.focus(); } });
+
+  /* ───── Modal ───── */
+  const modal = $('#modal'), body = $('#m-body'), prev = $('#m-prev'), next = $('#m-next');
+  let curKey = null, opener = null, closing = false;
+  const render = key => {
+    const d = DETAILS[key]; curKey = key;
+    const list = GROUPS[d.group]; const idx = list.indexOf(key);
+    const blocks = (d.blocks || []).map(b => `
+      <div class="m-block"><h4>${esc(b.h)}</h4>${b.p ? `<p>${esc(b.p)}</p>` : ''}${b.list ? `<ul>${b.list.map(([a, s, m]) =>
+        `<li><b>${esc(a)}</b>${m ? `<span class="mono">${esc(m)}</span>` : ''}${s ? `<span>${esc(s)}</span>` : ''}</li>`).join('')}</ul>` : ''}</div>`).join('');
+    body.innerHTML = `
+      <div><p class="eyebrow m-kicker">${esc(d.kicker)} <span class="m-pos">· ${idx + 1} de ${list.length}</span></p>
+      <h2 class="m-title" id="m-title">${esc(d.title)}</h2></div>
+      ${d.lead ? `<p class="m-lead">${esc(d.lead)}</p>` : ''}
+      <div class="m-blocks">${blocks}</div>
+      ${d.chips ? `<div class="chips">${d.chips.map(c => `<span class="chip">${esc(c)}</span>`).join('')}</div>` : ''}
+      ${d.src ? `<p class="m-src">Fonte: ${esc(d.src)}</p>` : ''}`;
+    prev.hidden = next.hidden = list.length < 2;
+    prev.dataset.to = list[(idx - 1 + list.length) % list.length];
+    next.dataset.to = list[(idx + 1) % list.length];
+    prev.setAttribute('aria-label', 'Anterior: ' + DETAILS[prev.dataset.to].title);
+    next.setAttribute('aria-label', 'Próximo: ' + DETAILS[next.dataset.to].title);
+    if (!reduce.matches) { body.style.animation = 'none'; body.offsetHeight; body.style.animation = ''; }
+  };
+  const open = (key, from) => {
+    opener = from || document.activeElement; render(key);
+    modal.classList.remove('is-closing'); closing = false;
+    modal.showModal(); modal.scrollTop = 0; $('#m-close').focus();
+    document.documentElement.style.overflow = 'hidden';
+  };
+  const close = () => {
+    if (!modal.open || closing) return;
+    const done = () => { modal.close(); modal.classList.remove('is-closing'); closing = false; document.documentElement.style.overflow = ''; if (opener && opener.focus) opener.focus({ preventScroll: true }); };
+    if (reduce.matches) return done();
+    closing = true; modal.classList.add('is-closing'); setTimeout(done, 280);
+  };
+  $$('[data-open]').forEach(el => { if (el.tagName === 'BUTTON' && el.classList.contains('theme') === false) el.addEventListener('click', () => open(el.dataset.open, el)); });
+  $('#m-close').addEventListener('click', close);
+  prev.addEventListener('click', () => render(prev.dataset.to));
+  next.addEventListener('click', () => render(next.dataset.to));
+  modal.addEventListener('cancel', e => { e.preventDefault(); close(); });
+  modal.addEventListener('click', e => { if (!$('#panel').contains(e.target)) close(); });
+  modal.addEventListener('keydown', e => {
+    if (e.target.closest && e.target.closest('input,textarea')) return;
+    if (e.key === 'ArrowRight' && !next.hidden) { e.preventDefault(); render(next.dataset.to); }
+    if (e.key === 'ArrowLeft' && !prev.hidden) { e.preventDefault(); render(prev.dataset.to); }
+  });
+
+  /* ───── Copy ───── */
+  let toastT;
+  const toast = msg => {
+    let t = $('.toast'); if (t) t.remove();
+    t = document.createElement('div'); t.className = 'toast glass'; t.setAttribute('role', 'status'); t.textContent = msg;
+    document.body.appendChild(t); clearTimeout(toastT); toastT = setTimeout(() => t.remove(), 2200);
+  };
+  const selectText = el => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
+    const v = b.dataset.copy; const target = b.closest('.ccard').querySelector('.val');
+    const fallback = () => { selectText(target); toast(b.dataset.label + ' selecionado. Use Copiar do sistema.'); };
+    try { navigator.clipboard.writeText(v).then(() => toast(b.dataset.label + ' copiado'), fallback); } catch (e) { fallback(); }
+  }));
+})();
+</script>
+</body>
+</html>
